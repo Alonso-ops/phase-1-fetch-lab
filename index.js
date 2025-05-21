@@ -1,5 +1,5 @@
 function fetchBooks() {
-  fetch('https://anapioficeandfire.com/api/books')
+  return fetch('https://anapioficeandfire.com/api/books')
     .then(response => response.json())
     .then(data => renderBooks(data))
     .catch(error => console.error('Error fetching books:', error)); 
@@ -15,5 +15,5 @@ function renderBooks(books) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  fetchBooks('return');
+  fetchBooks();
 });
